@@ -1,0 +1,26 @@
+.vscode/
+.vs/
+bin/
+obj/
+*.suo
+*.user
+*.suo
+*.user
+*.sln.docstates
+
+# NuGet Packages
+*.nuget.props
+*.nuget.targets
+packages/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# ReSharper
+*.[Rr]e[Ss]harper
+*.resharper.user
