@@ -9,7 +9,7 @@
         /// <summary>
         /// Timestamp indicating when the measurement was taken.
         /// </summary>
-        public string x { get; set; }
+        public string? x { get; set; }
         /// <summary>
         /// Total number requests made to the database that are miss
         /// </summary>

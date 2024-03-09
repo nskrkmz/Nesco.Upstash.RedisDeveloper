@@ -9,7 +9,7 @@
         /// <summary>
         /// Timestamp indicating when the measurement was taken.
         /// </summary>
-        public string x { get; set; }
+        public string? x { get; set; }
         /// <summary>
         /// The total bandwidth size for that specific timestamp
         /// </summary>

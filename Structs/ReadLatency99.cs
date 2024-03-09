@@ -9,7 +9,7 @@
         /// <summary>
         /// Timestamp indicating when the measurement was taken.
         /// </summary>
-        public string x { get; set; }
+        public string? x { get; set; }
         /// <summary>
         /// The 99th percentile server read latency observed in the last hour
         /// </summary>
