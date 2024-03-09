@@ -9,7 +9,7 @@
         /// <summary>
         /// Timestamp indicating when the measurement was taken.
         /// </summary>
-        public string x { get; set; }
+        public string? x { get; set; }
         /// <summary>
         /// Throughput seen on the database connections for read requests
         /// </summary>

@@ -9,7 +9,7 @@
         /// <summary>
         /// Timestamp indicating when the measurement was taken.
         /// </summary>
-        public string x { get; set; }
+        public string? x { get; set; }
         /// <summary>
         /// The average read latency value measured in the last hour
         /// </summary>

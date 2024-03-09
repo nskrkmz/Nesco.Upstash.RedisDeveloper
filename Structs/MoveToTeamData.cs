@@ -5,7 +5,7 @@
         /// <summary>
         /// The ID of the target team
         /// </summary>
-        public string team_id;
+        public string? team_id;
         /// <summary>
         /// The ID of the database to be moved
         /// </summary>
