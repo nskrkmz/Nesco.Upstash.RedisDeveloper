@@ -1,3 +1,7 @@
+![NuGet Version](https://img.shields.io/nuget/v/Nesco.Upstash.RedisDeveloper?logo=nuget&label=nuget%20version&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FNesco.Upstash.RedisDeveloper)
+![NuGet Downloads](https://img.shields.io/nuget/dt/Nesco.Upstash.RedisDeveloper?logo=nuget&label=nuget%20downloads&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FNesco.Upstash.RedisDeveloper)
+
+
 This package includes an implementation of the [Upstash Redis Developer API](https://upstash.com/docs/devops/developer-api/redis/).
 
 [API Pool](#api-pool)
