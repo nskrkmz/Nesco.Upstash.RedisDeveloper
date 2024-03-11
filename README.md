@@ -26,7 +26,7 @@ IAuthUser authUser = new AuthUser(YOUR_EMAIL, YOUR_API_KEY);
 
 ```csharp
     IUpstashRedisDeveloperService redisDeveloperService = new UpstashRedisDeveloperService();
-    INewRedisDatabaseRequest databaseRequest = new NewRedisDatabaseRequest(name:"test-db", region:"eu-west-1", tls:true);
+    INewRedisDatabaseRequest databaseRequest = new NewRedisDatabaseRequest(name:"test-db", Region.EU_WEST_1, tls:true);
     RedisDatabase db = await redisDeveloperService.CreateDatabaseAsync(authUser, newRedisDatabaseRequest);
     /* ===== db includes
     * string? database_id
