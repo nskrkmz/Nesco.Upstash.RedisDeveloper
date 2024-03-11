@@ -13,15 +13,20 @@
         private readonly string _region;
         private readonly bool _tls;
 
-        public NewRedisDatabaseRequest(string name, string region, bool tls)
+        public NewRedisDatabaseRequest(string name, Region region, bool tls)
         {
             if (string.IsNullOrEmpty(name))
                 throw new ArgumentNullException(nameof(name));
-            if (string.IsNullOrEmpty(region))
-                throw new ArgumentNullException(nameof(region));
-
             _name = name;
-            _region = region;
+            try
+            {
+                _region = RegionEndpoints.GetRegionString(region);
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException($"{ex.Message}: {nameof(region)}", ex);
+            }
+
             _tls = tls;
         }
 

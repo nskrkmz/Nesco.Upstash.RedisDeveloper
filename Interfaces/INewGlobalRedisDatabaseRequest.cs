@@ -17,21 +17,46 @@
         private readonly string[]? _readRegions;
         private readonly bool _tls;
 
-        public NewGlobalRedisDatabaseRequest(string name, string region, string primaryRegion, string[]? readRegions, bool tls)
+        public NewGlobalRedisDatabaseRequest(string name, Region region, Region primaryRegion, Region[]? readRegions, bool tls)
         {
             if (string.IsNullOrEmpty(name))
                 throw new ArgumentNullException(nameof(name));
-            if (string.IsNullOrEmpty(region))
-                throw new ArgumentNullException(nameof(region));
-            if (string.IsNullOrEmpty(primaryRegion))
-                throw new ArgumentNullException(nameof(primaryRegion));
-
             _name = name;
-            _region = region;
-            _primaryRegion = primaryRegion;
-            if (readRegions != null)
-                _readRegions = readRegions;
 
+            try
+            {
+                _region = RegionEndpoints.GetRegionString(region);
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException($"{ex.Message}: {nameof(region)}", ex);
+            }
+
+            try
+            {
+                _primaryRegion = RegionEndpoints.GetRegionString(primaryRegion);
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException($"{ex.Message}: {nameof(primaryRegion)}", ex);
+            }
+            
+            if (readRegions != null)
+            {
+                try
+                {
+                    List<string> tmpRegions = new List<string>();
+                    foreach (Region c_region in readRegions)
+                    {
+                        tmpRegions.Add(RegionEndpoints.GetRegionString(c_region));
+                    }
+                    _readRegions = tmpRegions.ToArray();
+                }
+                catch (ArgumentException ex)
+                {
+                    throw new ArgumentException($"{ex.Message}: {nameof(readRegions)}", ex);
+                }
+            }
             _tls = tls;
         }
 
