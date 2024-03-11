@@ -5,10 +5,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>Nesco.Upstash.RedisDeveloper</Title>
-    <Description>This package includes an implementation of the Upstash Redis Developer API.</Description>
+    <Description>.NET Package for Upstash Redis Developer API</Description>
     <Company>Nesco</Company>
     <Copyright>MIT</Copyright>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.0.2</Version>
+    <PackageTags>upstash;redis;developerapi</PackageTags>
+    <PackageReleaseNotes>bind region endpoints</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/nskrkmz/Nesco.Upstash.RedisDeveloper</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/nskrkmz/Nesco.Upstash.RedisDeveloper</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
