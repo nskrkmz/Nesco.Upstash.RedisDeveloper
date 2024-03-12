@@ -15,11 +15,11 @@ using Nesco.Upstash.RedisDeveloper;
 ```
 
 * This package requires an instance of IAuthUser interface for all calls.
+> [Create an API key](https://upstash.com/docs/devops/developer-api/introduction#create-an-api-key)
 
 ```c#
 IAuthUser authUser = new AuthUser(YOUR_EMAIL, YOUR_API_KEY);
 ```
-
 
 <details open>
 <summary>Create a Redis Database</summary>
